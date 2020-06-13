@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOJO Sports</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="https://media-exp1.licdn.com/dms/image/C5103AQG2jsyPgDlgeQ/profile-displayphoto-shrink_200_200/0?e=1597276800&v=beta&t=hV_Ver4EA_05qVCdkNj9NJ2c8Rs2rDgfmpk8Dq80Bws"
+        type="image/x-icon">
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="display-3">DOJO Sports</h1>
+    </div>
+
+    <div id="login_div" class="main-div">
+        <h3 class="display-4">Firebase Login</h3>
+        <input type="email" placeholder="Enter Email" id="email" />
+        <input type="password" placeholder="Enter Password" id="pwd" />
+
+        <button onclick="login()" class="btn btn-primary" style="font-size: 20px; width: 45%;" id="login">Login</button>
+        <button onclick="add()" class="btn btn-success" style="font-size: 20px; width: 45%; margin-left: 50px;" id="add">Sign Up</button>
+    </div>
+
+    <div id="user_div" class="loggedin-div">
+        <h3 class="display-4">Welcome User</h3>
+        <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+        <button onclick="logout()" class="btn btn-danger">Logout</button>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCGtHGH0NuP7yvXwK4d2CJgivkTgz6TsuU",
+            authDomain: "dojo-989ae.firebaseapp.com",
+            databaseURL: "https://dojo-989ae.firebaseio.com",
+            projectId: "dojo-989ae",
+            storageBucket: "dojo-989ae.appspot.com",
+            messagingSenderId: "835073601089",
+            appId: "1:835073601089:web:77124f2cf5b4f6b295e0c0",
+            measurementId: "G-MRJD06CTF3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
